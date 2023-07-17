@@ -15,7 +15,8 @@ export class CharacterDetailsComponent {
   constructor(private route: ActivatedRoute, private characterService: PaginaService){}
   
   // Recogemos la id del componente padre y se la pasamos al método getCharacterDetails y este a su vez a la api
-  ngOnInit() {
+  ngOnInit() {    
+    // Con el this.route.params accedemos al componente padre y de alli recogeriamos la id para pasarla al siguiente método
     this.route.params.subscribe(params => {
       this.characterId = params['id'];
       this.getCharacterDetails();

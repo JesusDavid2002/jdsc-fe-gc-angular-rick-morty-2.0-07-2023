@@ -10,12 +10,16 @@ import { CharacterDetailsComponent } from './main/character-details/character-de
 
 const routes: Routes = [
   {
-    path:'' ,
+    path:'home' ,
     component: HomeComponent
   },
   {
     path:'character-list',
     component: CharacterListComponent
+  },
+  {
+    path:'character-detail/:id',
+    component: CharacterDetailsComponent
   },
   {
     path:'about-us',
@@ -30,9 +34,14 @@ const routes: Routes = [
     component: RegisterComponent
   },
   {
-    path:'character-detail/:id',
-    component: CharacterDetailsComponent
-  }
+    path:'',
+    pathMatch: 'full',
+    redirectTo: '/home'
+  },
+  {
+    path:'**',
+    component: HomeComponent
+  },
 ];
 
 @NgModule({

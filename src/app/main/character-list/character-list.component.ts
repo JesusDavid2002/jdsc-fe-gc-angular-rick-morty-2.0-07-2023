@@ -16,8 +16,7 @@ export class CharacterListComponent{
   random(){
       for (let i = 0; i < 8; i++) {
       let randomCharacters = (Math.floor(Math.random()*700)+1);
-      this.arrayChar.push(`,${randomCharacters}`);
-      
+      this.arrayChar.push(`,${randomCharacters}`);      
     }
     return this.arrayChar;
   }
